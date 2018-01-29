@@ -229,7 +229,7 @@ h2 {
 
 #work {
   background-image: url(img/work.png);
-  background-size: contain;
+  background-size: cover;
   background-position: top center;
   height: 900px;
 }
@@ -494,7 +494,6 @@ footer a {
 
   #work {
     margin-top: -150px;
-    background-size: cover;
     height: auto;
   }
 
