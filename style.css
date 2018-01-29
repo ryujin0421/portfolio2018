@@ -8,6 +8,10 @@
   src: url('Antro_Vectra.otf');
 }
 
+body {
+  background-color: #3E3C89;
+}
+
 header {
   background-color: #f2f2f0;
   background-image: url(img/background_main.png);
@@ -95,7 +99,7 @@ nav a {
 
 header p {
   text-align: center;
-  color: #F2F2F0;
+  color: #3e3c89;
   padding-top: 170px;
   letter-spacing: 6px;
   font-family: "Century Gothic";
@@ -225,7 +229,7 @@ h2 {
 
 #work {
   background-image: url(img/work.png);
-  background-size: cover;
+  background-size: contain;
   background-position: top center;
   height: 900px;
 }
@@ -356,39 +360,201 @@ footer a {
   }
 
   #about p {
-    width:430px;
+    width: 430px;
   }
-  
-  .center{
+
+  .center {
     width: 670px;
   }
-  
-  .icon{
+
+  .icon {
     width: 200px
   }
-  
-  .wrapper{
+
+  .wrapper {
     width: 700px;
   }
-  
-  .project img{
+
+  .project img {
     width: 210px;
   }
-  
-  #vision img{
+
+  #vision img {
     width: 330px;
   }
-  
-  .text{
+
+  .text {
     width: 650px;
   }
 
 }
 
 @media screen and (max-width:414px) and (min-width:320px) {
-  
-  header img{
-    width: 100px;
+
+  header {
+    background-position: top;
+    background-size: contain;
+    background-position: bottom;
+    height: 600px;
+    text-align: center;
+  }
+
+  .sub_logo img {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .sub_logo {
+    width: 200px;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header p {
+    text-align: center;
+    padding-top: 260px;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  #about {
+    height: 100%;
+  }
+
+  .center {
+    width: 320px;
+    margin: 20px auto 0;
+  }
+
+  .center img {
+    margin-left: -25px;
+  }
+
+  .introduce {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .introduce p {
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .name {
+    font-size: 34px !important;
+    letter-spacing: 10px;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .btn {
+    padding-bottom: 70px;
+    margin-top: 70px;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  #skill {
+    height: 100%;
+  }
+
+  .wrapper {
+    width: 300px;
+    margin: 50px auto 100px;
+    overflow: hidden;
+  }
+
+  .icon {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .icon img {
+    width: 130px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+
+  .icon p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 5px;
+  }
+
+  .icon.last {
+    margin-bottom: 150px;
+  }
+
+  #work {
+    margin-top: -150px;
+    background-size: cover;
+    height: auto;
+  }
+
+  .project {
+    float: left;
+    margin-top: 30px;
+  }
+  .project img {
+    width: 300px;
+  }
+
+  #vision {
+    height: 100%;
   }
   
+
+.vision_img {
+  width: 300px;
+  margin: 60px auto 0;
+}
+
+.text {
+  width: 300px;
+  margin: 10px auto 0;
+  color: #3E3C89;
+  font-family: "YuGothic";
+}
+
+.text strong {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.text p {
+  width: 300px;
+  font-size: 14px;
+  font-family: "YuGothic";
+  text-shadow: 2px 1px 3px #ffffff;
+  line-height: 20px;
+}
+
+footer {
+  text-align: center;
+  color: #ffffff;
+  background-color: #3E3C8C;
+  height: 170px;
+  font-size: 14px
+}
+
+footer .link {
+  padding: 80px 0 30px;
+  overflow: hidden;
+}
+
+footer a {
+  margin: 10px;
+  padding: 100px 0;
+  color: #f26295;
+  font-family: "YuGothic";
+}
+
+
 }
