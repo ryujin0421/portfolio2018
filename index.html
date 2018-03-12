@@ -63,6 +63,19 @@
         return false;
       });
     });
+    
+    $(function () {
+    setTimeout('rect()'); //アニメーションを実行
+});
+ 
+function rect() {
+    $('#rect').animate({
+        marginTop: '-=10px'
+    }, 800).animate({
+        marginTop: '+=10px'
+    }, 800);
+    setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
+}
 
   </script>
 </head>
@@ -70,7 +83,6 @@
 <body>
   <header>
     <div class="bar">
-      <img src="img/logo.png" alt="">
       <div class="circleBehind">
         <nav>
           <ul>
@@ -82,9 +94,17 @@
         </nav>
       </div>
     </div>
+    
+    <div id="rect">
+    <img src="img/triangle.png" alt="">
+    </div>
+    
+    <div class="hello">
+      <img src="img/background_main.png" alt="">
+    </div>
 
     <div class="sub_logo">
-      <img src="img/name_main.png" alt="">
+      <img src="img/message.png" alt="">
     </div>
 
     <p>WEB/GRAPHIC/DESIGN/PHOTOGRAPH</p>
@@ -122,7 +142,7 @@
       </p>
     </div>
     <div class="btn fuwat">
-      <a href="#">MORE</a>
+      <a href="https://www.facebook.com/ryujin0421" target="_blank">MORE</a>
     </div>
   </section>
 
@@ -169,7 +189,7 @@
       <div class="icon last">
         <img src="img/management_icon.png" alt="">
         <h3>Management</h3>
-        <p>中高時代から学級院長、サッカー部部長、応援団長などの常にコミュニティの中心を任されることが多く、現在もインターン先でコースのリーダーを担っている。またフリーランス経験や企業のデザイナーとして新規事業に携わっていた経験がある。</p>
+        <p>中高時代から学級委員長、サッカー部部長、応援団長などの常にコミュニティの中心を任されることが多く、現在もインターン先でコースのリーダーを担っている。またフリーランス経験や企業のデザイナーとして新規事業に携わっていた経験がある。</p>
       </div>
     </div>
   </section>
@@ -217,7 +237,7 @@
       </div>
     </div>
     <div class="btn fuwat">
-      <a href="#">MORE</a>
+      <a href="https://ryujin0421.github.io/ryujin_products/" target="_blank">MORE</a>
     </div>
   </section>
   <section id="vision">
@@ -255,7 +275,7 @@
       <p>自分はコミュニティの中心にいることが多い。なぜなら自分の身の回りにいる人や大切な人を喜ばせたいからだ。自分が作ったものを使ってもらい喜んでもらえたこと。自分という存在が誰かに夢を与えたり、誰かの人生に変化を与えられることができたこと。これが人生で一番幸せなことだ。だからこれからも一生誰かをHAPPYにできるものを作りたいし、誰かをHAPPYにし続けるエンターテイナーでありたい。</p>
     </div>
     <div class="btn fuwat">
-      <a href="#">MORE</a>
+      <a href="https://www.facebook.com/ryujin0421" target="_blank">MORE</a>
     </div>
   </section>
   <footer>
