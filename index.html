@@ -63,19 +63,35 @@
         return false;
       });
     });
-    
-    $(function () {
-    setTimeout('rect()'); //アニメーションを実行
-});
- 
-function rect() {
-    $('#rect').animate({
+
+    $(function() {
+      setTimeout('rect()'); //アニメーションを実行
+    });
+
+    function rect() {
+      $('#rect').animate({
         marginTop: '-=10px'
-    }, 800).animate({
+      }, 800).animate({
         marginTop: '+=10px'
-    }, 800);
-    setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
-}
+      }, 800);
+      setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
+    }
+
+    //    ポップアップ
+    $(function() {
+      $('.zoom_up').click(function(e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        $(id).fadeIn();
+        $('.popupbg').fadeIn();
+        $('body').addClass('stop-scrolling');
+      })
+      $('.popupbg,.close_btn').click(function() {
+        $('.popup_wrapper:visible').fadeOut();
+        $('.popupbg').fadeOut();
+        $('body').removeClass('stop-scrolling');
+      });
+    });
 
   </script>
 </head>
@@ -94,11 +110,11 @@ function rect() {
         </nav>
       </div>
     </div>
-    
+
     <div id="rect">
-    <img src="img/triangle.png" alt="">
+      <img src="img/triangle.png" alt="">
     </div>
-    
+
     <div class="hello">
       <img src="img/background_main.png" alt="">
     </div>
@@ -220,24 +236,81 @@ function rect() {
             </svg>
     </h2>
     <div class="wrapper fuwat">
-      <div class="project">
-        <a href="https://motety.com/" target="_blank">
-      <img src="img/motety.png" alt="">
+      <a href="#img01_wrapper" class="zoom_up work">
+        <img src="leaders.png">
       </a>
-      </div>
-      <div class="project">
-        <a href="#">
-      <img src="img/arch.png" alt="">
+      <a href="#img02_wrapper" class="zoom_up work">
+        <img src="technorogia.png">
       </a>
-      </div>
-      <div class="project last">
-        <a href="https://www.technologia-schoolofmagic.jp/" target="_blank">
-      <img src="img/mozer.png" alt="">
+      <a href="#img03_wrapper" class="zoom_up work">
+        <img src="matchcloset.png">
       </a>
+      <!--      リーダーズ-->
+      <div id="img01_wrapper" class="popup_wrapper">
+        <div class="modal">
+          <div class="close_btn"><img src="close.png"></div>
+          <img src="leaders.png" width="800">
+          <div class="modal_contents">
+            <h3>Title</h3>
+            <p>Leaders10th WebデザインコースLOGO</p>
+            <h3>Work</h3>
+            <p>ライフイズテックのメンターを育成するIT教育研修プログラム10期のコースロゴを製作しました。現在、関東、関西合わせて20人ほどの大学生にWebデザインとフロントエンドのプログラミングを教えています。また100人以上の大学生にデザインツールを使った講義をしています。
+              <img src="leaders02.jpg" width="500"> Web上のプログラミングではhtmlタグを使うのでタグのシルエットをメインに「Leaders」の「L」と「10期」の「10」の文字を変形させてシンボルマークにしました。研修に合格した後、光や太陽のように中高生のメンバーを導く存在になってほしいという思いを込めて黄色を使っています。
+            </p>
+            <div class="contents_btn">
+              <a href="https://life-is-tech.com/leaders/">MORE</a>
+            </div>
+          </div>
+        </div>
       </div>
+      <!--テクノロジア-->
+      <div id="img02_wrapper" class="popup_wrapper">
+        <div class="modal">
+          <div class="close_btn"><img src="close.png"></div>
+          <img src="technorogia.png" width="800">
+          <div class="modal_contents">
+            <h3>Title</h3>
+            <p>テクノロジア魔法学校</p>
+            <h3>Work</h3>
+            <p>ディズニーとライフイズテックのコラボで制作した今までにないプログラミング教材です。ディズニーの世界観を使って楽しみながらプログラミングを学べるこの教材は主にメディアアート/ゲーム/Webデザインの3つのコースがあります。
+              <img src="technologia02.png" width="500"><br> プログラミングの学習において特に問題となっているのが「学習の継続」と「苦手意識」だと考えており、それぞれのディズニータイトルの世界観を使ったレッスンをクリアするたびにアイテムが家に届きモチベーションをあげる仕組みを取っています。ライフイズテックはプログラミングを楽しみながら学べるようにエンターテイメント要素も含みながら学習することができるので誰でも簡単にプログラミングを学ぶことができる仕組みになっています。ライフイズテックのメンターは普段5,6人の中高生に大学生が１人ついて対面でプログラミングを教えています。中高生がどこでつまづくか、どういう教え方をすればわかりやすいかなど教育のノウハウを知っている大学生メンターが教材を作成しているのでわかりやすい教材を作ることがきます。 自分はそこでWebデザインコースの教材を担当しており、HTML/CSS/JavaScriptの教材を作っています。実際に出しているレッスンは一部ですが、１年間で数十個のレッスンを作成しており最適な教え方やディズニー世界観を最大限に引き出すデザインを製作していきました。繰り返しやることで誰でもWebサイトを作れるようなカリキュラムになっています。<br>
+              <img src="technologia03.png" width="500"><br> インターンですがデザインチームに入れてもらいUI/UXを担当しました。 世界観はディズニーが誕生した1920年代アメリカでアールヌーヴォを意識したデザインで幾何学的な模様を使ったりしています。仕様書を元にデザインを繰り返しチーフデザイナーと一緒に製作しています。素材を作ってくれるデザイナーから素材をもらい、それを仕様書を元にデザインツールのsketchを使ってInVisionで繰り返しデザインを作りました。半年間で100ページ以上のデザインを作成しました。
+              <br>
+              <img src="technologia04.png" width="500"><br>
+            </p>
+            <div class="contents_btn">
+              <a href="https://www.technologia-schoolofmagic.jp/" target="_blank">MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--      Match Mlothes-->
+      <div id="img03_wrapper" class="popup_wrapper">
+        <div class="modal">
+          <div class="close_btn"><img src="close.png"></div>
+          <img src="matchcloset.png" width="800">
+          <div class="modal_contents">
+            <h3>Title</h3>
+            <p>Match Clothes</p>
+            <h3>Concept</h3>
+            <p>Favorite Clothes of Favorite person</p>
+            <p>〜お互いに好きな服を着よう〜</p>
+            <h3>Work</h3>
+            <p>デザイナーの登竜門と言われているGoodgatchのサマーインターンに参加した時の作品です。テーマは「ファッション×AI」でサービスを作るというものでした。簡単にサービスを伝えると、AIがお互いの好みやシーンに適したファッションを分析し、レコメンドしてくれるサービスです。PMが1人デザイナーが2人の3人チームで僕はサービスのUIデザインを担当しました。ファッションに関する悩みをアンケートを取った際「自分に合ったファッションが 分からない・決められない人が多い」問題に着目し、そこで僕らは相手の好みやシチュエーションに合っていて、自分も着たいと思える服装を知ることができるサービスを提案しました。 背景として、好きな人とデートをすることが決まった時「よく思われたい」という感情があると思います。そこでこのサービスを使うと初めに自分の好みのファッションを選んでもらう（相手も同様）ので相手が好むファッションとシーン（デート）などを選択することで人工知能がオススメの服をオススメしてくれます。これによりファッションに疎い男性が気軽に服を決めることができてデートでもうまく行くことができるそんなサービスです。
+            </p>
+            <div class="contents_btn">
+              <a href="https://www.icloud.com/keynote/05COc1BlzbjFux7aQV5CEYFGQ#TKR_production%5F%E6%9C%80%E7%B5%82%E3%83%95%E3%82%9A%E3%83%AC%E3%82%BB%E3%82%99%E3%83%B3" target="_blank">MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popupbg">
+      </div>
+      <div class="clear"></div>
     </div>
+
     <div class="btn fuwat">
-      <a href="#">MORE</a>
+      <a href="https://ryujin0421.github.io/portfolio/" target="_blank">MORE</a>
     </div>
   </section>
   <section id="vision">
